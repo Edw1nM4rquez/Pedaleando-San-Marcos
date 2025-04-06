@@ -91,10 +91,11 @@ export default function App() {
           id="inicio"
           className="min-h-screen flex flex-col items-center justify-center "
         >
-          <div className="content bg-[#00000085] text-center w-full justify-items-center">
+          <div className="content bg-[#00000085] text-center p-2 w-full justify-items-center">
             <h1 className="text-4xl font-bold mb-4 text-white shadow-2xl">
               PEDALEANDO 2025
             </h1>
+            <p className="text-2xl text-white font-bold">20 de Abril</p>
             <p className="text-lg text-center max-w-xl text-white">
               Bienvenido al sitio oficial de San Marcos Pedaleando 2025. Aquí
               encontrarás horarios, mapa de ruta, auspiciantes y más.
@@ -230,7 +231,7 @@ export default function App() {
                 📍 Lugar
               </h3>
               <p className="text-gray-300">
-                Cañar - Azogues - Parroquia Luis Cordero
+                Cañar - Azogues - Parroquia Luis Cordero | 20 Abril
               </p>
             </div>
 
@@ -247,7 +248,7 @@ export default function App() {
 
             <div className="bg-gray-900 rounded-2xl shadow-lg p-6 flex flex-col justify-center border border-gray-700 hover:shadow-yellow-400/20 transition-shadow">
               <h3 className="text-2xl font-bold mb-4 text-yellow-400">
-                💳 Costo 10$ USD  
+                💳 Costo 10$ USD
               </h3>
               <p className="text-gray-300 font-semibold">
                 Transferencia | Banco Bolivariano
@@ -256,7 +257,26 @@ export default function App() {
                 # Cuenta:{" "}
                 <span className="font-semibold text-white">4021091167</span>
                 <br />
-                Byron Toalongo
+                # Nombre: Byron Toalongo
+                <br />
+                <p>
+                  Enviar el comprobante al número de teléfono :{" "}
+                  <span
+                    className="font-semibold cursor-pointer"
+                    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+                    onClick={(e: any) => {
+                      e.preventDefault();
+                      const numero = VITE_PHONE; // <-- Reemplaza con tu número de WhatsApp (con código de país)
+                      const texto = encodeURIComponent(
+                        `Hola, envio mi comprobante de la inscripción.`
+                      );
+                      const whatsappUrl = `whatsapp://send?phone=${numero}&text=${texto}`;
+                      window.location.href = whatsappUrl;
+                    }}
+                  >
+                    +{VITE_PHONE}
+                  </span>
+                </p>
               </p>
             </div>
           </div>
@@ -285,7 +305,7 @@ export default function App() {
           <h2 className="text-3xl font-bold mb-6">🗺️ Mapa de Ruta</h2>
           <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-lg border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m54!1m12!1m3!1d5475.509136623124!2d-78.82997822652362!3d-2.7507385707770373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m39!3e0!4m3!3m2!1d-2.7505317!2d-78.8284351!4m5!1s0x91cd0d4297cba00f%3A0xaeabd656f612397c!2sIglesia%20Cat%C3%B3lica%20de%20San%20Marcos%2C%20Azogues!3m2!1d-2.7440624!2d-78.8255039!4m3!3m2!1d-2.7372514!2d-78.8152868!4m3!3m2!1d-2.7333366!2d-78.8071075!4m3!3m2!1d-2.7253209999999997!2d-78.7976116!4m3!3m2!1d-2.7256415!2d-78.81469469999999!4m5!1s0x91cd0d4297cba00f%3A0xaeabd656f612397c!2sIglesia%20Cat%C3%B3lica%20de%20San%20Marcos!3m2!1d-2.7440624!2d-78.8255039!4m5!1s0x91cd0d65e8270ba7%3A0x54b4347da306620c!2sAzogues!3m2!1d-2.7508653!2d-78.82880329999999!5e0!3m2!1ses!2sec!4v1743961327746!5m2!1ses!2sec"
+              src="https://www.google.com/maps/embed?pb=!1m49!1m12!1m3!1d4878.126440088619!2d-78.82806936749566!3d-2.750142930129842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m34!3e0!4m4!2s-2.750543%2C%20-78.82854!3m2!1d-2.750543!2d-78.82853999999999!4m3!3m2!1d-2.7372662!2d-78.8154878!4m3!3m2!1d-2.7349945!2d-78.8084013!4m3!3m2!1d-2.7251029!2d-78.7977458!4m3!3m2!1d-2.7258997!2d-78.8141301!4m3!3m2!1d-2.737171!2d-78.8154819!4m3!3m2!1d-2.7477175!2d-78.8266446!4m3!3m2!1d-2.7505744!2d-78.8286184!5e0!3m2!1ses!2sec!4v1743964855015!5m2!1ses!2sec"
               width="100%"
               height="100%"
               style={{ border: 0 }}
@@ -320,8 +340,8 @@ export default function App() {
               const texto = encodeURIComponent(
                 `Hola, soy ${nombre}.\nMensaje: ${mensaje}`
               );
-
-              window.open(`https://wa.me/${numero}?text=${texto}`, "_blank");
+              const whatsappUrl = `whatsapp://send?phone=${numero}&text=${texto}`;
+              window.location.href = whatsappUrl;
             }}
           >
             <input
