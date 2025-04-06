@@ -305,7 +305,7 @@ export default function App() {
           <h2 className="text-3xl font-bold mb-6">🗺️ Mapa de Ruta</h2>
           <div className="w-full h-[500px] rounded-lg overflow-hidden shadow-lg border border-gray-200">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m49!1m12!1m3!1d4878.126440088619!2d-78.82806936749566!3d-2.750142930129842!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m34!3e0!4m4!2s-2.750543%2C%20-78.82854!3m2!1d-2.750543!2d-78.82853999999999!4m3!3m2!1d-2.7372662!2d-78.8154878!4m3!3m2!1d-2.7349945!2d-78.8084013!4m3!3m2!1d-2.7251029!2d-78.7977458!4m3!3m2!1d-2.7258997!2d-78.8141301!4m3!3m2!1d-2.737171!2d-78.8154819!4m3!3m2!1d-2.7477175!2d-78.8266446!4m3!3m2!1d-2.7505744!2d-78.8286184!5e0!3m2!1ses!2sec!4v1743964855015!5m2!1ses!2sec"
+              src="https://www.google.com/maps/d/embed?mid=1xi6r-IK81-P-ycA7Z90r8qpMljRE5oQ&ehbc=2E312F"
               width="100%"
               height="100%"
               style={{ border: 0 }}
