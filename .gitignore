@@ -23,6 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 .env
-./flowbite-react/*
-./vscode/*
-./dist/*
+flowbite-react
+vscode
+dist

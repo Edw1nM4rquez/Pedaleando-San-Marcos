@@ -57,7 +57,7 @@ export default function App() {
           <div className=" font-bold text-lg flex items-center">
             <img src={logoSanMarcos} alt="" className="h-14" />
             <span className="text-white text- base uppercase ml-1">
-              Pedalenado 2025
+              Pedaleando 2025
             </span>
           </div>
           <button
