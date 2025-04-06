@@ -10,7 +10,7 @@ function FooterComponent() {
         year={2025}
         className="text-center"
       />
-      <div className="absolute right-0 mr-2">
+      <div className="md:absolute lg:absolute right-0 mr-2 justify-items-center">
         <img src={casaMarquez} alt="" className="h-16" />
         {/* <FooterLink href="#">About</FooterLink>
         <FooterLink href="#">Privacy Policy</FooterLink>
