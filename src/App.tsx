@@ -243,6 +243,7 @@ export default function App() {
                 <li>Azogues - Terminal viejo | Ferretería Peñaloza</li>
                 <li>Parq. Luis Cordero | Tienda Los SIMBA'S</li>
                 <li>Quillopungo | Papelería Márquez</li>
+                <li>Av. 16 Abril - Romero Vicuña | JOZE BIKE</li>
               </ul>
             </div>
 
