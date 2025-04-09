@@ -254,7 +254,7 @@ export default function App() {
               <p className="text-gray-300 font-semibold">
                 Transferencia | Banco Bolivariano
               </p>
-              <p className="text-gray-300">
+              <div className="text-gray-300">
                 # Cuenta:{" "}
                 <span className="font-semibold text-white">4021091167</span>
                 <br />
@@ -278,7 +278,7 @@ export default function App() {
                     +{VITE_PHONE}
                   </span>
                 </p>
-              </p>
+              </div>
             </div>
           </div>
         </section>
